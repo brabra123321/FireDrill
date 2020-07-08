@@ -8,7 +8,7 @@ public class WorkFlowBase : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("Hello");
+        Debug.Log("Good Bye");
     }
 
     // Update is called once per frame
