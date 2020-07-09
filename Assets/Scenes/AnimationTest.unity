@@ -264,6 +264,54 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 720963094}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1507959162
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1507959164}
+  - component: {fileID: 1507959163}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1507959163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1507959162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1f3903a9e872b442a6b6e4518944e9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  M_Camera: {fileID: 2015252142}
+  P_Head: {fileID: 720963097}
+  p_head: {fileID: 720963096}
+  Chara: {fileID: 720963095}
+  animator: {fileID: 0}
+--- !u!4 &1507959164
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1507959162}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.17319682, y: 0.69234765, z: -0.3114473}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2015252142
 GameObject:
   m_ObjectHideFlags: 0
@@ -275,7 +323,6 @@ GameObject:
   - component: {fileID: 2015252145}
   - component: {fileID: 2015252144}
   - component: {fileID: 2015252143}
-  - component: {fileID: 2015252146}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -347,20 +394,3 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2015252146
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2015252142}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1f3903a9e872b442a6b6e4518944e9e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  M_Camera: {fileID: 2015252142}
-  P_Head: {fileID: 720963097}
-  p_head: {fileID: 720963096}
-  Chara: {fileID: 720963095}
-  animator: {fileID: 0}
