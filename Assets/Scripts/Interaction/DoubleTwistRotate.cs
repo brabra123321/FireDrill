@@ -5,7 +5,10 @@ using Lean.Touch;
 
 namespace FireDrill
 {
-
+    /// <summary>
+    /// 两指旋转来控制物体旋转。
+    /// 会用到configs中的参数来调整。
+    /// </summary>
     public class DoubleTwistRotate : MonoBehaviour, IInteraction
     {
 

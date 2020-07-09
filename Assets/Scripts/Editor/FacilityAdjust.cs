@@ -18,31 +18,41 @@ namespace FireDrill
     public class FacilityAdjust : Editor
     {
 
-        //[MenuItem(@"AdjustFacilityPrefab/QuicklySetup", priority = 101)]
-        //public static void SetupFacilityPrefab()
-        //{
-        //    GameObject[] targets = Selection.gameObjects;
-        //    foreach (var target in targets)
-        //    {
-        //        GameObject parent = new GameObject(target.name);
-        //        parent.transform.position = Vector3.zero;
-        //        parent.transform.rotation = Quaternion.Euler(Vector3.zero);
-        //        parent.transform.localScale = Vector3.one;
+        [MenuItem(@"AdjustUtils/QuicklySetup", priority = 101)]
+        public static void SetupExtinguisherDisplayPrefab()
+        {
+            GameObject[] targets = Selection.gameObjects;
+            foreach (var target in targets)
+            {
+                GameObject parent = new GameObject(target.name);
+                parent.transform.position = Vector3.zero;
+                parent.transform.rotation = Quaternion.Euler(Vector3.zero);
+                parent.transform.localScale = Vector3.one;
 
-        //        LeanSelectable selectable = parent.AddComponent<LeanSelectable>();
-        //        //selectable.DeselectOnUp = true;
-        //        parent.AddComponent<SingleSwipeRotate>();
-        //        parent.AddComponent<DoublePinchScale>();
-        //        parent.AddComponent<DoubleTwistRotate>();
-        //        //parent.AddComponent<Facility>();
+                LeanSelectable selectable = parent.AddComponent<LeanSelectable>();
+                //selectable.DeselectOnUp = true;
+                parent.AddComponent<SingleSwipeRotate>();
+                parent.AddComponent<DoublePinchScale>();
+                parent.AddComponent<DoubleTwistRotate>();
+                parent.AddComponent<ExtinguisherInfo>();
 
-        //        target.transform.SetParent(parent.transform);
-        //        AdjustUtils.AdjustCenterToZero(target);
-        //        AdjustUtils.AddBoxCollider(target);
-        //        Bounds bounds = AdjustUtils.getBounds(target);
-        //        AdjustUtils.AdjustSize(target, bounds.size.y > bounds.size.x);
-        //    }
-        //}
+                target.transform.SetParent(parent.transform);
+                AdjustUtils.AdjustCenterToZero(target);
+                AdjustUtils.AddBoxCollider(target);
+                Bounds bounds = AdjustUtils.getBounds(target);
+                AdjustUtils.AdjustSize(target, bounds.size.y > bounds.size.x);
+            }
+        }
+
+        [MenuItem(@"AdjustUtils/AddBoxCollider", priority = 101)]
+        public static void AddBoxCollider()
+        {
+            GameObject[] targets = Selection.gameObjects;
+            foreach (var target in targets)
+            {
+                AdjustUtils.AddBoxCollider(target);
+            }
+        }
 
         [MenuItem(@"GameObject/AdjustCenterToZero", priority = 0)]
         public static void AdjustCenterToZero()
@@ -75,16 +85,7 @@ namespace FireDrill
         {
             AdjustSize(false);
         }
-
-        [MenuItem(@"AdjustFacilityPrefab/AddBoxCollider", priority = 101)]
-        public static void AddBoxCollider()
-        {
-            GameObject[] targets = Selection.gameObjects;
-            foreach (var target in targets)
-            {
-                AdjustUtils.AddBoxCollider(target);
-            }
-        }
+        
         
         public static void AdjustSize(bool vertical)
         {

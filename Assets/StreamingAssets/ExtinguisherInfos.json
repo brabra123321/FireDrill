@@ -1,0 +1,16 @@
+{
+    "Extinguishers":[
+        {
+            "prefabName":"miehuoqi_01",
+            "name":"干粉灭火器",
+            "description":"",
+            "steps":""
+        },
+        {
+            "prefabName":"miehuoqi_02",
+            "name":"二氧化碳灭火器",
+            "description":"",
+            "steps":""
+        }
+    ]
+}

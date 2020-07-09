@@ -108,7 +108,11 @@ namespace FireDrill
             }
             return Mathf.Sqrt(camDis * (1f - disLeftRate) / diagnalLength);//记得开根号
         }
-
+        /// <summary>
+        /// 获取物体的整个包围盒的函数，通用并且好用
+        /// </summary>
+        /// <param name="target"></param>
+        /// <returns></returns>
         public static Bounds getBounds(GameObject target)
         {
             Renderer[] rs = target.GetComponentsInChildren<Renderer>();
@@ -129,7 +133,11 @@ namespace FireDrill
             }
             return bounds;
         }
-
+        /// <summary>
+        /// 因为18版没有自带的计算函数，因此
+        /// </summary>
+        /// <param name="cam"></param>
+        /// <returns></returns>
         public static float VerticalFovToHorizontal(Camera cam)
         {
             return 2 * Mathf.Atan(Mathf.Tan(cam.fieldOfView * Mathf.Deg2Rad / 2) * cam.aspect) * Mathf.Rad2Deg;
