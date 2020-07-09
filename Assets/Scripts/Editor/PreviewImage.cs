@@ -6,10 +6,26 @@ using UnityEditor;
 
 namespace FacilityDisplay
 {
+    /// <summary>
+    /// 用来扒下Prefab的预览图存在textures里面以供可能需要的使用
+    /// </summary>
     public class PreviewImage : Editor
     {
         public static string SavePath;
-
+        /// <summary>
+        /// 构建图片保存路径，确保目录存在
+        /// </summary>
+        private static void SetupPath()
+        {
+            SavePath = Application.dataPath + "/Textures/PreviewImgs/";
+            if (!Directory.Exists(SavePath))
+            {
+                Directory.CreateDirectory(SavePath);
+            }
+        }
+        /// <summary>
+        /// 通过AssetPreview来拔去prefab的预览图并且保存
+        /// </summary>
         [MenuItem("Assets/SavePreviewImg")]
         public static void SavePreviewImg()
         {
@@ -29,13 +45,5 @@ namespace FacilityDisplay
             Debug.Log("Save Preview Image End");
         }
 
-        private static void SetupPath()
-        {
-            SavePath = Application.dataPath + "/Textures/PreviewImgs/";
-            if (!Directory.Exists(SavePath))
-            {
-                Directory.CreateDirectory(SavePath);
-            }
-        }
     }
 }

@@ -6,7 +6,10 @@ using Lean.Touch;
 
 namespace FireDrill
 {
-
+    /// <summary>
+    /// 两指并拢张开来进行缩放的交互功能类。
+    /// 会利用到Config中配置的参数来进行控制。
+    /// </summary>
     [RequireComponent(typeof(LeanSelectable))]
     public class DoublePinchScale : MonoBehaviour, IInteraction
     {

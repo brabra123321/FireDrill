@@ -1,4 +1,8 @@
-﻿//using System.Collections;
+﻿/*
+ * 暂时注释了，考虑不要这个功能。
+ */
+
+//using System.Collections;
 //using System.Collections.Generic;
 //using UnityEngine;
 //using UnityEditor;

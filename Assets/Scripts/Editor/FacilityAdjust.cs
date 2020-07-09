@@ -12,6 +12,9 @@ using Lean.Touch;
 
 namespace FireDrill
 {
+    /// <summary>
+    /// 把AdjustUtils中的方法包装到编辑器拓展里
+    /// </summary>
     public class FacilityAdjust : Editor
     {
 
@@ -92,7 +95,6 @@ namespace FireDrill
                 return;
             }
             Camera cam = Camera.main;
-            //float edgeRate = 0.1f;//这里以后可以考虑从config里拿。
             foreach (var target in targets)
             {
                 AdjustUtils.AdjustSize(target, vertical, cam, Configs.AdjustSize_EdgeReserve);

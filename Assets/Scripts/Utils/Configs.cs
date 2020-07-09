@@ -7,6 +7,10 @@ using Newtonsoft.Json.Linq;
 
 namespace FireDrill
 {
+    /// <summary>
+    /// 一些对应设置的json加载和读取器。
+    /// 主要包括交互方面的设置，协程动画时长的设置以及编辑器拓展方面的设置。
+    /// </summary>
     [ExecuteAlways]
     public class Configs : MonoBehaviour
     {

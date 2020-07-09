@@ -6,7 +6,9 @@ using Lean.Touch;
 
 namespace FireDrill
 {
-
+    /// <summary>
+    /// 单指旋转操作
+    /// </summary>
     [RequireComponent(typeof(LeanSelectable))]
     public class SingleSwipeRotate : MonoBehaviour, IInteraction
     {
@@ -38,11 +40,12 @@ namespace FireDrill
                 {
                     LeanFinger finger = LeanTouch.Fingers[0];
                     Vector2 differ = finger.ScreenPosition - finger.LastScreenPosition;
-                    if (Mathf.Abs(finger.ScreenDelta.x) > Configs.SingleSwipePixelThreshold.x)
+                    if (Mathf.Abs(finger.ScaledDelta.x) > Mathf.Abs(finger.ScaledDelta.y) &&
+                        Mathf.Abs(finger.ScreenDelta.x) > Configs.SingleSwipePixelThreshold.x)
                     {
                         transform.Rotate(Vector3.up, -differ.x * Sensitivity, Space.World);
                     }
-                    if (Mathf.Abs(finger.ScreenDelta.y) > Configs.SingleSwipePixelThreshold.x)
+                    else if (Mathf.Abs(finger.ScreenDelta.y) > Configs.SingleSwipePixelThreshold.x)
                     {
                         transform.Rotate(Vector3.right, -differ.y * Sensitivity, Space.World);
                     }
