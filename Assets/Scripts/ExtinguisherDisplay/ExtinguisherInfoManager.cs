@@ -13,6 +13,7 @@ namespace FireDrill
         public static string InfoPath;
         public static string ResourcesPath;
 
+        public Transform initTrans;
         public bool inited = false;
         public List<GameObject> extinguishers;
 
@@ -58,7 +59,7 @@ namespace FireDrill
                     GameObject extinguisherPrefab = Resources.Load<GameObject>(ResourcesPath + prefabName);
                     if (extinguisherPrefab != null)
                     {
-                        GameObject extinguisherObj = Instantiate(extinguisherPrefab);
+                        GameObject extinguisherObj = Instantiate(extinguisherPrefab, initTrans);
                         extinguisherObj.GetComponent<ExtinguisherInfo>().Init(jObject);
                         extinguishers.Add(extinguisherObj);
                         extinguisherObj.SetActive(false);
