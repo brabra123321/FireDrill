@@ -4,8 +4,10 @@ using UnityEngine;
 
 namespace FireDrill
 {
-    public class Extinguisher : MonoBehaviour
+    public class Extinguisher : Focusable, IInteractable
     {
+        [Header("Debug")]
+        public bool interactable = true;
         // Start is called before the first frame update
         void Start()
         {
@@ -16,6 +18,17 @@ namespace FireDrill
         void Update()
         {
 
+        }
+
+
+        public void Interacted()
+        {
+
+        }
+
+        public bool IsInteractable()
+        {
+            return focused && interactable;
         }
     }
 }

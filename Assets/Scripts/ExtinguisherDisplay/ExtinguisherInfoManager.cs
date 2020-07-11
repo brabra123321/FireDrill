@@ -7,7 +7,10 @@ using Newtonsoft.Json.Linq;
 
 namespace FireDrill
 {
-
+    public delegate void ChangeCurDisplayingEvent();
+    /// <summary>
+    /// Display场景中使用的灭火器统一管理用。
+    /// </summary>
     public class ExtinguisherInfoManager : MonoBehaviour
     {
         public static string InfoPath;
@@ -16,6 +19,8 @@ namespace FireDrill
         public Transform initTrans;
         public bool inited = false;
         public List<GameObject> extinguishers;
+        public int curDisplaying = 0;
+        public ChangeCurDisplayingEvent changeEvent;
 
         public void Init()
         {
@@ -27,8 +32,11 @@ namespace FireDrill
             LoadExtinguishers();
             if (extinguishers.Count > 0)
             {
+                curDisplaying = 0;
                 extinguishers[0].SetActive(true);
+                extinguishers[0].GetComponent<ExtinguisherInfo>().PlayAppearAnim();
             }
+            inited = true;
         }
 
 
@@ -75,6 +83,59 @@ namespace FireDrill
                 Debug.LogError("info path does not exists");
             }
             Debug.Log("Load Facilities End");
+        }
+
+
+        public bool HasNext()
+        {
+            return /*extinguishers.Count > 1 && */ curDisplaying < extinguishers.Count - 1;
+        }
+        public bool HasPrev()
+        {
+            return /*extinguishers.Count > 1 && */ curDisplaying > 0;
+        }
+
+        public ExtinguisherInfo getCurInfo()
+        {
+            if (!inited)
+            {
+                return null;
+            }
+            return extinguishers[curDisplaying].GetComponent<ExtinguisherInfo>();
+        }
+
+        public void ShowNext()
+        {
+            if (!HasNext())
+            {
+                return;
+            }
+            ExtinguisherInfo curE = getCurInfo();
+            curE.StopAppearAnim();
+            curE.ResetState();
+            curE.gameObject.SetActive(false);
+            curDisplaying++;
+            curE = getCurInfo();
+            curE.gameObject.SetActive(true);
+            curE.PlayAppearAnim();
+            changeEvent?.Invoke();
+        }
+
+        public void ShowPrev()
+        {
+            if (!HasPrev())
+            {
+                return;
+            }
+            ExtinguisherInfo curE = extinguishers[curDisplaying].GetComponent<ExtinguisherInfo>();
+            curE.StopAppearAnim();
+            curE.ResetState();
+            curE.gameObject.SetActive(false);
+            curDisplaying--;
+            curE = extinguishers[curDisplaying].GetComponent<ExtinguisherInfo>();
+            curE.gameObject.SetActive(true);
+            curE.PlayAppearAnim();
+            changeEvent?.Invoke();
         }
 
     }

@@ -109,7 +109,8 @@ namespace FireDrill
             return Mathf.Sqrt(camDis * (1f - disLeftRate) / diagnalLength);//记得开根号
         }
         /// <summary>
-        /// 获取物体的整个包围盒的函数，通用并且好用
+        /// 获取物体的整个包围盒的函数，通用好用，
+        /// 但是要注意没有优化，每次获取都会重新计算
         /// </summary>
         /// <param name="target"></param>
         /// <returns></returns>

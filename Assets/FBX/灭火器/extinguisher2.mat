@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: extinguisher1
+  m_Name: extinguisher2
   m_Shader: {fileID: 4800000, guid: d2d8bf6e457028d468cc8dfccae761a3, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 0
@@ -20,7 +20,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BaseTex:
-        m_Texture: {fileID: 2800000, guid: 145f2f1039b9bd94d96f7c5014c5af53, type: 3}
+        m_Texture: {fileID: 2800000, guid: 6b4a344288aa51f42ada6e9070122265, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:

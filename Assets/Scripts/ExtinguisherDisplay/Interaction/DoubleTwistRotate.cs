@@ -34,7 +34,8 @@ namespace FireDrill
                     float twistDegree = Mathf.Pow(Mathf.Abs(InteractStateMachine.machine.twist), Configs.DoubleTwistSensitivity)
                         * (InteractStateMachine.machine.twist > 0 ? 1 : -1);
                     //Debug.Log(twistDegree);
-                    transform.rotation *= Quaternion.AngleAxis(twistDegree, axis);
+                    //transform.rotation *= Quaternion.AngleAxis(twistDegree, axis);
+                    transform.Rotate(axis, twistDegree, Space.Self);
                 }
             }
         }
