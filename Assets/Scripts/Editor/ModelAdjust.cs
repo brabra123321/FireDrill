@@ -103,6 +103,18 @@ namespace FireDrill
         }
     }
 
+    public class Test : EditorWindow
+    {
+        public void test()
+        {
+            
+        }
+
+        private void OnDisable()
+        {
+            
+        }
+    }
     
 }
 
