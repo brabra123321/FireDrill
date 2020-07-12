@@ -13,7 +13,7 @@ TextureImporter:
     borderMipMap: 0
     mipMapsPreserveCoverage: 0
     alphaTestReferenceValue: 0.5
-    mipMapFadeDistanceStart: 8
+    mipMapFadeDistanceStart: 9
     mipMapFadeDistanceEnd: 10
   bumpmap:
     convertToNormalMap: 0
@@ -32,7 +32,7 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: -1
-    aniso: 16
+    aniso: 3
     mipBias: -100
     wrapU: -1
     wrapV: -1
