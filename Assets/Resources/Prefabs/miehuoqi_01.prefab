@@ -11,8 +11,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.2676091, y: 0.5332734, z: 0.15400001}
-  m_Center: {x: 0.036771655, y: 0.2666367, z: -0.000000007450581}
+  m_Size: {x: 0.2676091, y: 0.5332734, z: 0.15400004}
+  m_Center: {x: 0.03677166, y: 0.2666367, z: 0.0000000065565118}
 --- !u!1 &2019579478900147572
 GameObject:
   m_ObjectHideFlags: 0
@@ -146,19 +146,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 54ccd8cc84551fb4f900d97923c7f76c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.48412994
+      value: -0.12677218
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 54ccd8cc84551fb4f900d97923c7f76c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.5104976
+      value: -0.91924375
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 54ccd8cc84551fb4f900d97923c7f76c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.0000000980932
+      value: -0.000000022603912
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 54ccd8cc84551fb4f900d97923c7f76c, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0.000000021855694
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 54ccd8cc84551fb4f900d97923c7f76c, type: 3}
       propertyPath: m_LocalRotation.y
@@ -190,15 +190,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 54ccd8cc84551fb4f900d97923c7f76c, type: 3}
       propertyPath: m_LocalScale.x
-      value: 13.165847
+      value: 3.4475515
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 54ccd8cc84551fb4f900d97923c7f76c, type: 3}
       propertyPath: m_LocalScale.y
-      value: 13.165847
+      value: 3.4475515
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 54ccd8cc84551fb4f900d97923c7f76c, type: 3}
       propertyPath: m_LocalScale.z
-      value: 13.165847
+      value: 3.4475515
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 54ccd8cc84551fb4f900d97923c7f76c, type: 3}
       propertyPath: m_Materials.Array.data[0]

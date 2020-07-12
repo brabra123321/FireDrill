@@ -72,7 +72,7 @@ Material:
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _EmmiEdgeLen: 0.045
+    - _EmmiEdgeLen: 0.02
     - _FreshnelPower: 1.24
     - _FresnelBias: 0.12
     - _FresnelScale: 2.57
@@ -88,6 +88,7 @@ Material:
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
+    - _UseClip: 1
     - _ZWrite: 1
     - __dirty: 0
     - _clipY: -3.62
@@ -96,4 +97,4 @@ Material:
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _EmmisionColor: {r: 18.379171, g: 0, b: 0.21622555, a: 0}
     - _StripeColor: {r: 0, g: 0.7957666, b: 1, a: 0}
-    - _TransColor: {r: 1, g: 0.06575353, b: 0, a: 0}
+    - _TransColor: {r: 0.6792453, g: 0.28750446, b: 0.25952297, a: 0}
