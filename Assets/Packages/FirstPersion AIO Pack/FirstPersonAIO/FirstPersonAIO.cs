@@ -863,13 +863,13 @@ public class FirstPersonAIO : MonoBehaviour {
         SerializedProperty customPhysMat;
 
         static Texture2D adTex1;
-        bool loadedAds = false;
+        //bool loadedAds = false;
 
         string versionNum = "20.6.13cu (Unity 2017-2018)";
         void OnEnable(){
             
             t = (FirstPersonAIO)target;
-            loadedAds = false;
+            //loadedAds = false;
             SerT = new SerializedObject(t);
             staticFS = SerT.FindProperty("footStepSounds");
             

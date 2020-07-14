@@ -1,0 +1,22 @@
+
+{
+    "SingleSwipePixelThreshold": {
+        "x": 4.0,
+        "y": 4.0
+    },
+    "DoubleSwipePixelThreshold": {
+        "x": 10.0,
+        "y": 10.0
+    },
+    "DoublePinchScaleThreshold": 0.015,
+    "DoublePinchScaleSensitivity": 1.05,
+    "DoubleTwistDegreeThreshold": 0.3,
+    "DoubleTwistSensitivity":1.2,
+    "PressDetectDuration": 0.8,
+
+    "AdjustSize_EdgeReserve": 0.3,
+    "AppearAnimationLength":2.0,
+    "DisappearAnimationLength":1.2,
+    "FacilityListAnimationLength":0.5
+
+}

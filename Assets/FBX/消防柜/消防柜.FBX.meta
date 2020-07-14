@@ -44,7 +44,17 @@ ModelImporter:
     4300012: miehuoqi_005
     7400000: Take 001
     9500000: //RootNode
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: miehuoqi_02
+    second: {fileID: 2100000, guid: 1f40b0fb191874646a006e6de49ae46e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "\u6D88\u9632\u67DC"
+    second: {fileID: 2100000, guid: a7937e96962f0214ca70e0d9431fac56, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
